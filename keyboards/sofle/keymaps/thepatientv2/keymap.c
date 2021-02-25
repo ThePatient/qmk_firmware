@@ -32,15 +32,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
  * QWERTY
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | ESC  |   1  |   2  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  |  `   |
+ * | ESC  |   2  |   3  |   4  |   5  |   6  |                    |   7  |   8  |   9  |   0  |   -  |  =   |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | ESC  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  | Bspc |
+ * |   1  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  \   |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |  '   |
  * |------+------+------+------+------+------|  MUTE |    |       |------+------+------+------+------+------|
- * |LShift|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  |RShift|
+ * |LShift|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  |LGAME |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *            | LGUI | LAlt | LCTR |LOWER | /Enter  /       \Space \  |RAISE | RCTR | RAlt | RGUI |
+ *            | LAlt | LGUI | LCTR |LOWER | /Space  /       \   BS \  |ENTER | CTRL | RAlt | RGUI |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
  */
@@ -55,10 +55,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_F1,      KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_F6,                  KC_F7,  KC_F8,  KC_F9,  KC_F10, KC_F11,     KC_F12, \
         LCTL(KC_GRV), KC_TILD, KC_HOME, KC_UP, KC_END, KC_PGUP,             KC_NO, KC_NO, KC_NO, KC_BSLS, KC_PIPE, KC_NO, \
         LSFT(KC_TAB), KC_GRV, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN,            KC_NO, KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR, KC_NO, \
-        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,            KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO,                  KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO),
+        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,            KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO,                  KC_DEL, KC_TRNS, KC_TRNS, KC_NO, KC_NO
+    ),
 	[_LOWER] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_1, KC_2, KC_3, KC_TRNS, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_R, KC_Q, KC_W, KC_E, KC_TAB, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_F, KC_A, KC_S, KC_D, KC_LSFT, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_V, KC_C, KC_X, KC_Z, KC_LCTL, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_ESC, KC_SPC, KC_G, KC_TRNS, KC_TRNS),
-    [_RAISE] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_1, KC_2, KC_3, KC_TRNS, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_R, KC_Q, KC_W, KC_E, KC_TAB, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_F, KC_A, KC_S, KC_D, KC_LSFT, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_V, KC_C, KC_X, KC_Z, KC_LCTL, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_ESC, KC_SPC, KC_G, KC_TRNS, KC_TRNS),
+    [_RAISE] = LAYOUT(KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_1, KC_2, KC_3, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_R, KC_Q, KC_W, KC_E, KC_TAB, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_F, KC_A, KC_S, KC_D, KC_LSFT, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_V, KC_C, KC_X, KC_Z, KC_LCTL, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_ESC, KC_SPC, KC_G, KC_TRNS, KC_TRNS),
 	[_ADJUST] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_1, KC_2, KC_3, KC_TRNS, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_R, KC_Q, KC_W, KC_E, KC_TAB, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_F, KC_A, KC_S, KC_D, KC_LSFT, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_V, KC_C, KC_X, KC_Z, KC_LCTL, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_ESC, KC_SPC, KC_G, KC_TRNS, KC_TRNS)
 };
 
@@ -77,7 +78,7 @@ static void render_logo(void) {
 static void print_status_narrow(void) {
     // Print current mode
     oled_write_P(PSTR("\n\n"), false);
-    oled_write_ln_P(PSTR("MODE"), false);
+    // oled_write_ln_P(PSTR("MODE"), false);
     oled_write_ln_P(PSTR(""), false);
     // if (keymap_config.swap_lctl_lgui) {
     //     oled_write_ln_P(PSTR("MAC"), false);
@@ -104,10 +105,10 @@ static void print_status_narrow(void) {
             oled_write_P(PSTR("Base\n"), false);
             break;
 		case _COLEMAK:
-			oled_write_P(PSTR("SYMBOLS\n"), false);
+			oled_write_P(PSTR("MOD\n"), false);
 			break;
         case _RAISE:
-            oled_write_P(PSTR("LEFTY GAME"), false);
+            oled_write_P(PSTR("LEFTY\nGAME"), false);
             break;
         case _LOWER:
             oled_write_P(PSTR("Lower"), false);
@@ -119,8 +120,8 @@ static void print_status_narrow(void) {
             oled_write_ln_P(PSTR("Undef"), false);
     }
     oled_write_P(PSTR("\n\n"), false);
-    led_t led_usb_state = host_keyboard_led_state();
-    oled_write_ln_P(PSTR("CPSLK"), led_usb_state.caps_lock);
+    // led_t led_usb_state = host_keyboard_led_state();
+    //oled_write_ln_P(PSTR("CPSLK"), led_usb_state.caps_lock);
 }
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
@@ -312,9 +313,9 @@ void encoder_update_user(uint8_t index, bool clockwise) {
         }
     } else if (index == 1) {
         if (clockwise) {
-            tap_code(KC_MPRV);
-        } else {
             tap_code(KC_MNXT);
+        } else {
+            tap_code(KC_MPRV);
         }
     }
 }
